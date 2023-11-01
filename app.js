@@ -14,6 +14,14 @@ app.get('/req', (req, res) => {
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
+app.get("/", (req, res) => res.type('html').send(html));
+
+app.get('/nome', (req, res) => {
+  console.log("Just got a request!")
+  res.send('Vinícius de Souza Solique!')
+})
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 const html = `
 <!DOCTYPE html>
